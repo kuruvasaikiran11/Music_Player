@@ -1,3 +1,114 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//     const audioPlayer = document.getElementById("audio");
+//     const playButtonElement = document.getElementById("play");
+//     const pauseButtonElement = document.getElementById("pause");
+//     const replay = document.getElementById("replay");
+//     const forward = document.getElementById("forward");
+//     const backward = document.getElementById("backward");
+//     const slow = document.getElementById("slow");
+//     const fast = document.getElementById("fast");
+//     const normal = document.getElementById("normal");
+//     const rightSection = document.getElementById("right-section");
+//     const songTrack = document.getElementById("song-track");
+//     const coverImage = document.getElementById("cover-img")
+
+//     let musicData = [];
+
+//     // Function to create the song list HTML
+//     function createSongListHTML(song) {
+//         return `
+//         <div class="tracks" id="${song.id}">
+//             <img src="${song.albumCover}" alt="">
+//             <div class="track-details">
+//                 <h3>${song.track}</h3>
+//                 <p>${song.artist}</p>
+//             </div>
+//         </div>
+//         `;
+//     }
+
+//     // Function to set audio source and cover image
+//     function setAudioSourceAndCover(id) {
+//         const selectedSong = musicData[id - 1];
+//         audioPlayer.src = selectedSong.file;
+//         coverImage.src = selectedSong.albumCover;
+//         songTrack.innerHTML = `<h3>${selectedSong.track}</h3><p>${selectedSong.artist}</p>`;
+//     }
+
+//     // Fetch music data and create song list
+//     $.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist")
+//     .done(function (response) {
+//         musicData = response;
+
+//         for (let i = 0; i < musicData.length; i++) {
+//             rightSection.innerHTML += createSongListHTML(musicData[i]);
+//         }
+
+//         // Event listeners
+//         rightSection.addEventListener("click", function (event) {
+//             const id = event.target.closest(".tracks")?.id;
+//             if (id) {
+//                 setAudioSourceAndCover(id);
+//             }
+//         });
+
+//         playButtonElement.addEventListener("click", function () {
+//             audioPlayer.play();
+//             playButtonElement.style.display = "none";
+//             pauseButtonElement.style.display = "block";
+//         });
+
+//         pauseButtonElement.addEventListener("click", function () {
+//             audioPlayer.pause();
+//             pauseButtonElement.style.display = "none";
+//             playButtonElement.style.display = "block";
+//         });
+
+//         forward.addEventListener("click", function () {
+//             audioPlayer.currentTime += 10;
+//         });
+
+//         backward.addEventListener("click", function () {
+//             audioPlayer.currentTime -= 10;
+//         });
+
+//         replay.addEventListener("click", function () {
+//             audioPlayer.currentTime = 0;
+//             progress.style.width = 0 + "%";
+//         });
+
+//         fast.addEventListener("click", function () {
+//             audioPlayer.playbackRate = 2;
+//             fast.style.display = "none";
+//             slow.style.display = "block";
+//         });
+
+//         slow.addEventListener("click", function () {
+//             audioPlayer.playbackRate = 0.5;
+//             slow.style.display = "none";
+//             normal.style.display = "block";
+//         });
+
+//         normal.addEventListener("click", function () {
+//             audioPlayer.playbackRate = 1;
+//             normal.style.display = "none";
+//             fast.style.display = "block";
+//         });
+
+//         const progress = document.getElementById("progress-bar");
+//         audioPlayer.addEventListener("timeupdate", function () {
+//             progress.style.width = (audioPlayer.currentTime / audioPlayer.duration) * 100 + "%";
+//         });
+
+//         // Initialize audio and cover image
+//         setAudioSourceAndCover(1);
+//     })
+//     .fail(function (error) {
+//         console.error("Failed to fetch music data:", error);
+//     });
+// });
+
+
 var leftSection = document.getElementById("left-section");
 var rightSection = document.getElementById("right-section");
 var progressWrapper = document.getElementById("progress-wrapper");
