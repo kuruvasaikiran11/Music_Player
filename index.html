@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9a7165a460.js" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="root">
+        <div class="container">
+            <div class="box">
+                <div class="left" id="left-section">
+                    <audio src="https://edyoda.s3.ap-south-1.amazonaws.com/public/musicfiles/without-you.mp3" id="audio"></audio>
+                    <img src="https://m.media-amazon.com/images/I/81mNRm3F6KL._SS500_.jpg" alt="" id="cover-img">
+                    <div id="progress-wrapper">
+                        <div id="progress-bar">
+
+                        </div>
+                    </div>
+                    <div class="button-wrapper" id="buttons">
+                        <button class="btn small">
+                            <i class="fas" id="slow" aria-hidden="true">0.5x</i>
+                            <i class="fas" id="normal" aria-hidden="true">1x</i>
+                            <i class="fas" id="fast" aria-hidden="true">2x</i>
+                        </button>
+                        <button class="btn small">
+                            <i class="fas fa-step-backward" id="backward" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn">
+                            <i class="far fa-play-circle" id="play" aria-hidden="true"></i>
+                            <i class="far fa-pause-circle" id="pause" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn small">
+                            <i class="fas fa-step-forward" id="forward" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn small">
+                            <i class="fas fa-undo" id="replay" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="track" id="song-track">
+                        <h3>Without You</h3>
+                        <p>Avicii</p>
+                    </div>
+                </div>
+
+                <div class="right" id="right-section">
+                    <!-- <div class="tracks">
+                        <img src="https://pm1.narvii.com/6806/3e2b13347653f657cefb76e8da003cf49e17adeav2_hq.jpg" alt="">
+                        <div class="track-details">
+                            <h3>Youngblood</h3>
+                            <p>5 Seconds of Summer</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
