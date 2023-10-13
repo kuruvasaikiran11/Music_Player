@@ -11,4 +11,4 @@ This is a simple Music Player project created using JavaScript, HTML and CSS. It
 - Jump to Previous Song
 ## Demo
 
-You can check out the live demo of the Music Player .
+You can check out the live demo of the Music Player https://kuruvasaikiran11.github.io/Music_Player/
